@@ -1,0 +1,6 @@
+torch==2.7.1
+torchvision==0.22.1
+transformers==4.52.4
+pillow==11.2.1
+djitellopy==2.5.0
+opencv-python==4.11.0.86
