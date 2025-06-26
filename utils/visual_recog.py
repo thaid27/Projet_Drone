@@ -23,13 +23,7 @@ def choix_image(text_prompt, images):
 
     # Trouver l'image avec la proba la plus forte
     best_index = probs.argmax().item()
-    return best_index
+    return best_index, probs.cpu().tolist()
 
-if __name__ == "__main__":
-    image_paths = ["images/chien.jpg", "images/voiture.jpg", "images/pomme.jpg"]
-    images = [Image.open(path).convert("RGB") for path in image_paths]
-    
-    mot = "chien"
-    image_resultat = choix_image(mot, images)
-    print(f"L'image qui correspond le mieux au mot '{mot}' est : {image_resultat}")
+
 

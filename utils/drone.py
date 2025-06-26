@@ -23,7 +23,7 @@ def get_images(tello, nb_images, distance_btw_images):
         time.sleep(1)
         frame = frame_read.frame
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        cv2.imwrite(f"image_drone_{i}.png", frame_rgb)
+        cv2.imwrite(f"images_capt/image_drone_{i}.png", frame_rgb)
 
         image = Image.fromarray(frame_rgb)
         images.append(image)

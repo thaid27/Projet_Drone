@@ -18,7 +18,7 @@ frame = frame_read.frame
 #         break
 #     time.sleep(0.1)
 frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-cv2.imwrite("image_drone.png", frame_rgb)
+cv2.imwrite("iamges_capt/image_drone.png", frame_rgb)
 
 
 tello.streamoff()
