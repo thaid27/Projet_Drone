@@ -6,7 +6,7 @@ import time
 # Paramètres modifiables
 text_prompt = "chien"
 position_actuelle = 0
-hauteur_images = 20
+hauteur_images = 10
 distance_btw_images = 20 # à calibrer en fonction de la situation
 distance_mur = 50  # à calibrer en fonction de la situation
 nb_images = 3  
@@ -24,9 +24,7 @@ print("Décollage")
 images = get_images(tello, nb_images, distance_btw_images)
 print("Capture d'images")
 
-# Identification de l'image correspondant au prompt utilisateur
-index_choix = choix_image(text_prompt, images)
-print("Analyse des Images")
+index_choix = 0
 
 # Déplacement vers l'image correspondant 
 index_to_go = nb_images - 1 - index_choix # nb_images - 1 = index image tout à droite
